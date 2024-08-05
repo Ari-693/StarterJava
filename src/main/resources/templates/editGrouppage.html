@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Edit Group</title>
+    <meta name="author" content="Aryan">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" th:href="@{/CSS/navbar.css}">
+    <link rel="stylesheet" th:href="@{/CSS/form.css}">
+    <link rel="stylesheet" th:href="@{/CSS/back.css}">
+</head>
+
+
+<body>
+
+    <div class="navbar">
+
+        <h2><a href="/">Sample Java Project</a></h2>
+
+        <div class="navbuttons">
+            <a href="/addObject">Add object</a>
+            <a href="/viewObject">View object</a>
+            <a href="/addGroup">Add group</a>
+            <a href="/viewGroup">View group</a>
+        </div>
+
+    </div>
+
+    <div class="main">
+        <form th:action="@{/editGroup}" method="post" th:object="${group}">
+
+            <input type="hidden" th:field="*{id}">
+
+            <label for="name">Name:</label>
+            <input type="text" placeholder="Text.." th:field="*{name}" required>
+            <br>
+            <input type="submit" value="Register">
+
+
+        </form>
+        <br>
+        <form class="back" th:action="@{/}">
+            <input type="submit" value="Back">
+        </form>
+    </div>
+
+</body>
+
+</html>

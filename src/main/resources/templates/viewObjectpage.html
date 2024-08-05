@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Object list</title>
+  <meta name="author" content="Aryan">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" th:href="@{/CSS/navbar.css}">
+  <link rel="stylesheet" th:href="@{/CSS/table.css}">
+  <link rel="stylesheet" th:href="@{/CSS/back.css}">
+
+</head>
+
+
+<body>
+
+  <div class="navbar">
+
+    <h2><a href="/">Sample Java Project</a></h2>
+
+    <div class="navbuttons">
+      <a href="/addObject">Add object</a>
+      <a href="/viewObject">View object</a>
+      <a href="/addGroup">Add group</a>
+      <a href="/viewGroup">View group</a>
+    </div>
+
+  </div>
+
+
+  <div class="main">
+
+    <div class="table-container">
+
+      <h2>Object list</h2>
+
+      <ul class="responsive-table">
+
+        <li class="table-header">
+
+          <div class="col col-1">Sample Attribute</div>
+          <div class="col col-2">Sample Group</div>
+          <div class="col col-3"></div>
+          <div class="col col-4"></div>
+          <div class="col col-5"></div>
+
+        </li>
+
+        <li class="table-row" th:each="object:${objects}">
+
+          <div class="col col-1" data-label="Sample Attribute" th:text="${object.sampleAttribute}">Well</div>
+          <div class="col col-2" data-label="Sample Group" th:text="${object.sampleGroup}">there's</div>
+          <div class="col col-3"></div>
+          <div class="col col-4"><a th:href="@{/editObject/{id}(id=${object.id})}">Edit</a></div>
+          <div class="col col-5"><a th:href="@{/deleteObject/{id}(id=${object.id})}">Delete</a></div>
+        </li>
+
+      </ul>
+
+    </div>
+
+    <form class="back" th:action="@{/}">
+      <input type="submit" value="Back">
+    </form>
+
+  </div>
+
+</body>
+
+</html>

@@ -1,0 +1,10 @@
+CREATE TABLE sample_group (
+id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+name VARCHAR(40));
+
+CREATE TABLE sample_object (
+id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+sample_attribute VARCHAR(40),
+group_id INT NOT NULL,
+CONSTRAINT FK_group_id FOREIGN KEY (group_id) REFERENCES sample_group(id) ON DELETE CASCADE)
+;

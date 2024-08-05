@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+
+<head>
+
+	<meta charset="UTF-8">
+	<title>Sample Java Project</title>
+	<meta name="author" content="Aryan">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" th:href="@{/CSS/navbar.css}">
+	<link rel="stylesheet" th:href="@{/CSS/form.css}">
+
+</head>
+
+<style>
+	html {
+		color-scheme: dark;
+	}
+
+	.main img {
+		float: left;
+		margin: 50px;
+	}
+
+	.main h6 {
+		text-align: center;
+		text-wrap: wrap;
+	}
+
+	.main p {
+		margin-right: 10%;
+	}
+
+	.randomtext img {
+		float: right;
+	}
+</style>
+
+<body>
+	<div class="navbar">
+
+		<h2><a href="/">Sample Java Project</a></h2>
+
+		<div class="navbuttons">
+			<a href="/addObject">Add object</a>
+			<a href="/viewObject">View object</a>
+			<a href="/addGroup">Add group</a>
+			<a href="/viewGroup">View group</a>
+		</div>
+
+	</div>
+
+	<div class="main">
+
+		<h6>
+			Lorem ipsum dolor sit amet, consectetur adipiscing
+			elit. Praesent vitae leo velit.<br>
+			Nulla et lorem gravida, aliquet quam ac, egestas.
+		</h6>
+
+		<div class="ad">
+
+			<img th:src="@{Images/}" width=500px>
+			<br>
+			<br>
+			<p>
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+				Donec volutpat metus eros, at bibendum risus consectetur sed.
+				Mauris non sollicitudin sem. Nulla id arcu et tortor gravida
+				congue sed finibus arcu. Pellentesque euismod pellentesque sem,
+				eget cursus ante mollis ut. Aenean magna erat, vehicula id libero
+				a, finibus rhoncus nisi. Maecenas eget ex in nisi accumsan
+				tristique ac at neque. In hac habitasse platea dictumst. Integer
+				molestie est augue, id varius urna malesuada vitae. Pellentesque
+				rhoncus purus eget mi interdum ultrices. Ut maximus egestas laoreet.
+				Donec finibus metus lorem, ac laoreet dui venenatis id.
+				Nunc vestibulum eget turpis sit amet fringilla. Sed efficitur
+				libero eu arcu interdum ultricies.
+			</p>
+
+			<br>
+			<br>
+
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer.
+			<br>
+			<br>
+
+			<form th:action="@{/addObject}">
+				<input type="submit" value="Add object">
+			</form>
+
+		</div>
+
+		<div class="randomtext">
+
+			<p>
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vitae
+				turpis et quam accumsan.
+			</p>
+
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<hr>
+			<br>
+
+			<img th:src="@{Images/}" width=500px>
+
+			<p>
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+				Mauris efficitur erat neque. Nullam id est eu ligula lobortis
+				accumsan in venenatis ligula. Etiam ultricies, massa ut ultricies
+				facilisis, purus nisl ornare sem, nec ultrices lacus ipsum id nunc.
+				Nam et massa leo. Integer consequat diam massa, et varius mauris
+				venenatis vitae. Suspendisse ut aliquam orci, sit amet consectetur
+				massa. Pellentesque sed velit non est auctor eleifend. Suspendisse
+				potenti. Integer eget eros elit. Nulla facilisi. Integer convallis
+				feugiat scelerisque.
+			</p>
+
+			<br>
+
+			<p>
+				Sed varius luctus lacus sit amet varius.
+				Integer non felis a lectus bibendum ornare.
+				Fusce porttitor vel sapien nec interdum.
+				Duis sodales sem eget odio placerat, nec
+				mattis elit iaculis. Vestibulum ullamcorper
+				sollicitudin maximus. Praesent posuere eros mi,
+				non vehicula tortor blandit et. Nulla quis dolor
+				bibendum, maximus elit ultrices, elementum sapien.
+				Aenean et justo vitae turpis vehicula convallis.
+				In volutpat et nulla et dictum. Nulla laoreet diam
+				nec aliquet egestas. Nunc eget mauris quis dui
+				luctus gravida sit amet tristique felis. Nulla non
+				accumsan velit, in vestibulum sem.
+			</p>
+
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<hr>
+
+
+			<img th:src="@{Images/}" width=500px>
+
+
+			<p>
+				Curabitur facilisis, lacus sollicitudin rhoncus scelerisque,
+				mi leo vehicula turpis, nec auctor ex nulla eget arcu.
+				Phasellus eu arcu mi. Vestibulum ullamcorper tincidunt
+				tellus nec tempor. Curabitur dignissim dictum enim, ut
+				sodales elit. Nunc in magna ac elit suscipit rutrum in
+				uis est. Aenean consectetur id velit sit amet tempus.
+				Aenean et molestie lorem, id aliquet justo. Vestibulum
+				ante ipsum primis in faucibus orci luctus et ultrices
+				posuere cubilia curae; Curabitur et nulla viverra, mollis
+				ante vitae, bibendum dolor. Aenean congue purus id diam
+				semper, non mollis nisi lobortis. Maecenas euismod vel
+				magna vel pulvinar.
+			</p>
+
+			<br>
+
+			<p>
+				Aenean tellus dolor, varius ut venenatis sit amet,
+				laoreet nec velit. Suspendisse sed porttitor justo,
+				ut rutrum mi. Nam malesuada, felis et malesuada sodales,
+				nunc nibh scelerisque metus, eget egestas mi sapien non ex.
+				Fusce vehicula ex sed iaculis sollicitudin. Praesent eu
+				fringilla elit. Vestibulum dapibus leo nec nunc congue
+				mollis. Sed iaculis dui in nibh iaculis ultricies. In
+				suscipit eros a ornare luctus. Vestibulum eu magna mi.
+				Quisque euismod diam vel venenatis fermentum. Sed
+				elementum mauris et nibh hendrerit, a venenatis nisi
+				maximus. Pellentesque nec efficitur lacus. Aliquam erat
+				volutpat. Ut venenatis massa erat, eu tempor mi facilisis
+				non. Ut euismod fermentum nibh, et ornare magna eleifend
+				nec.
+			</p>
+
+		</div>
+
+	</div>
+
+</body>
+
+</html>

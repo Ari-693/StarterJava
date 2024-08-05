@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Add Object</title>
+    <meta name="author" content="Aryan">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" th:href="@{/CSS/navbar.css}">
+    <link rel="stylesheet" th:href="@{/CSS/form.css}">
+    <link rel="stylesheet" th:href="@{/CSS/back.css}">
+</head>
+
+
+<body>
+
+    <div class="navbar">
+
+        <h2><a href="/">Sample Java Project</a></h2>
+
+        <div class="navbuttons">
+            <a href="/addObject">Add object</a>
+            <a href="/viewObject">View object</a>
+            <a href="/addGroup">Add group</a>
+            <a href="/viewGroup">View group</a>
+        </div>
+
+    </div>
+
+    <div class="main">
+        <form th:action="@{/addObject}" method="post" th:object="${object}">
+
+            <label for="sampleAttribute">Sample attribute:</label>
+            <input type="text" placeholder="Text.." th:field="*{sampleAttribute}" required>
+            <br>
+            <label for="SampleGroup">Sample Group:</label>
+            <select th:field="*{SampleGroup}">
+                <option th:each="group : ${groups}" th:text="${group.name}" th:value="${group.name}"></option>
+            </select>
+            <br>
+            <input type="submit" value="Register">
+
+
+        </form>
+        <br>
+        <form class="back" th:action="@{/}">
+            <input type="submit" value="Back">
+        </form>
+    </div>
+
+</body>
+
+</html>
